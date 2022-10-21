@@ -1,0 +1,52 @@
+A1
+#include <iostream>
+using namespace std;
+int main(){
+int n; cin>>n;
+int i;
+double avg=0,avgq=0,m;
+for(i=0;i<n;++i){
+cin>>m;
+avg=avg+m;
+avgq=avgq+m*m;
+}
+cout<<avg/n<<endl;
+cout<<avgq/n;
+}
+
+A2
+#include <iostream>
+using namespace std;
+int main(){
+int n; cin>>n;
+int i;
+double m,pcount,ocount,zcount;
+for(i=0;i<n;++i){
+cin>>m;
+if(m>0){pcount+=1;}
+if(m==0){zcount+=1;}
+if(m<0){ocount+=1;}
+  }
+cout<<pcount<<" "<<zcount<<" "<<ocount;
+}
+
+A3
+
+#include <iostream>
+using namespace std;
+int main(){
+int M,F0,F1,Fn,n;
+cin>>M;
+F0=0;
+F1=1;
+Fn=0;
+n=1;
+while(M>=Fn)
+{
+Fn=F0+F1;
+F0=F1;
+F1=Fn;
+n=n+1;
+}
+cout<<Fn<<"_"<<n;
+}
